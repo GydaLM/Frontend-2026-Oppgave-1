@@ -3,24 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Style.css">
     <title>Oblig</title>
 </head>
 <body>
     <header>
-
+        <a href="main-content">Jump to Main Content</a>
+        <nav>
+            <div>EVENTO</div>
+            <a href="event">Events</a>
+            <a href="venue">Venue</a>
+            <a href="about">Abouts</a>
+            <a href="contact">Contacts</a>
+            <a href="profile">SVG profile</a>
+        </nav>
+        <span>
+            <input type="search" placeholder="Search">
+        </span>
+        <h1>Tech Conference 2025</h1>
+        <h2>Welcome!</h2>
+        <!-- <span>
+            Date: 5 March 2025
+            <svg viewbox="0 0 800 360">
+            <rect width="50px" height="50px" fill="blue"/>
+            </svg>
+        </span>
+        <span>
+            Location: The Box
+            <svg viewbox="0 0 800 360">
+            <circle cx="50" cy="50" r="25" fill="green" />
+            </svg>
+        </span>
+        <span>
+            Number of Speakers: 3
+            <svg viewbox="0 0 800 360">
+            <rect width="50px" height="50px"></rect>
+            </svg>
+        </span>
+        <span>
+            Price From: 299£
+            <svg viewbox="0 0 800 360">
+            <rect width="50px" height="50px"></rect>
+            </svg>
+        </span> -->
     </header>
 
     <section>
+        <form>
+            <h3>Register</h3>
+            <p>Ticket type:</p>
+            <input type="radio" value="Early Bird" aria-label="Early Bird">
+            <label for="Early Bird">Early Bird</label><br>
+            <input type="radio" value="Regular" aria-label="Regular">
+            <label for="Regular">Regular</label><br>
+            <input type="radio" value="VIP" aria-label="VIP">
+            <label for="VIP">VIP</label><br>
+            <label for="quantity">Quantity:</label>
+            <button aria-label="Minus ticket">-</button>
+            <input type="number" name="quantity" min="1" max="10" step="1" value="1" inputmode="numeric">
+            <button aria-label="Plus ticket">+</button><br>
+
+            <label>Full Name:</label>
+            <input type="text" aria-label="Full Name">
+            <label>E-mail:</label>
+            <input type="email" aria-label="E-mail">
+            <label>Company:</label>
+            <input type="text" aria-label="Company">
+            <label for="diet-selection">Dietary Needs:</label>
+            <select name="diets">
+                <option value="" aria-label="Diet option dropdown">--Choose Dietary Need--</option>
+                <option value="none" aria-label="No Preference">None</option>
+                <option value="meat-only" aria-label="Meat Only">Meat Only</option>
+                <option value="vegan" aria-label="Vegan">Vegan</option>
+                <option value="none of your business" aria-label="Prefer not to share">None of your business</option>
+            </select>
+
+            <input type="checkbox" value="I accept">
+            <label for="Agree">I Agree To Terms*</label>
+            <input type="submit" value="Submit">
+        </form>
 
     </section>
 
-    <menu>
 
-    </menu>
+    <main id="main-content">
+        <article>
+            <h3>About the Event</h3>
+            <p> Join 500+ developers for three days of hands-on workshops, keynotes and networking.</p>
+        </article>
 
-    <main>
+        <article>
+            <h3>Featured speakers</h3>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
 
+        <article>
+            <h3>Schedule Highlights</h3>
+            <ul>
+                <li>Day 1: Frontend Trends</li>
+                <li>Day 2: Performance Optimization</li>
+                <li>Day 3: Workshops Sessions</li>
+            </ul>
+        </article>
+        <a href="full-schedule">Go To Full Schedule →</a>
     </main>
     
 </body>
