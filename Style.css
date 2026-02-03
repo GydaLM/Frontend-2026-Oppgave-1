@@ -7,6 +7,17 @@ body {
     grid-template-rows: 1fr 3fr;
     grid-template-areas: 'header header' 
                          'section main';
+    
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
 }
 
 header {
@@ -21,10 +32,67 @@ section {
     background-color: rgb(49, 180, 115);
 }
 
+.inputForm {
+    margin: 0.5rem;
+}
+
+input:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+select:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.ticketQuantity {
+    width: 1.5rem;
+}
+
+.ticketBTN {
+    width: 1.5rem;
+}
+
+.ticketBTN, .submitBTN {
+    cursor: pointer;
+}
+.ticketBTN:hover, .submitBTN:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.SVG {
+    display: flex;
+    gap: 2rem;
+}
+
 main {
+    padding: 1rem;
     grid-area: main;
     background-color: brown;
 }
+
+.featuredSpeakers {
+    display: flex;
+    gap: 1rem;
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+}
+
+#fav1:checked + label img {
+    transform: scale(1.2);
+}
+#fav2:checked + label img {
+    transform: scale(1.2);
+}
+#fav3:checked + label img {
+    transform: scale(1.2);
+}
+
 
 
 

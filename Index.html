@@ -23,20 +23,38 @@
         <h1>Tech Conference 2025</h1>
         <h2>Welcome!</h2>
 
-        <svg width="20" height="20">
-            <rect width="16" height="16" x="2" y="2" fill="black"/>
-        </svg>
-        <span>Date: 5th March 2025</span>
-            <svg width="20" height="20">
-            <circle cx="10" cy="10" r="10" fill="green"/>
-            </svg>
-        <span>Location: The Box</span>
-            <svg width="20" height="20">
-            <circle cx="10" cy="10" r="10" fill="green"/>
-            </svg>
-        <svg width="100" height="60">
-        <line x1="10" y1="30" x2="190" y2="30" stroke="black" stroke-width="2" />
-        </svg>
+        <div class="SVG">
+            <span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-label="Calender symbol">
+                    <rect width="20" height="20" x="1" y="1" fill="black"/>
+                    <rect x="1" y="5" width="20" height="2" rx="1" fill="red"/>
+                </svg>
+                Date: 5th March 2025
+            </span>
+            <span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-label="Pin symbol">
+                    <circle cx="10" cy="10" r="6" fill="green"/>
+                    <rect x="8" y="7" width="4" height="19" rx="1" fill="green"/>
+                </svg>
+                Location: The Box
+            </span>
+            <span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-label="Speaker symbol">
+                    <rect x="1" y="2" width="4" height="19" rx="1" fill="orange"/>
+                    <rect x="8" y="7" width="4" height="12" rx="1" fill="#ffe66d"/>
+                    <rect x="15" y="4" width="4" height="18" rx="1" fill="#4ecdc4"/>
+                    <rect x="22" y="9" width="4" height="8" rx="1" fill="#ff6b6b"/>
+                </svg>
+                12 Speakers
+            </span>
+            <span>
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-label="Hjerte-ikon">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    fill="#ff6b6b"/>
+                </svg>
+                From 299€
+            </span>
+        </div>
     </header>
 
     <section>
@@ -50,28 +68,30 @@
             <input type="radio" value="VIP" aria-label="VIP">
             <label for="VIP">VIP</label><br>
             <label for="quantity">Quantity:</label>
-            <button aria-label="Minus ticket">-</button>
-            <input type="number" name="quantity" min="1" max="10" step="1" value="1" inputmode="numeric">
-            <button aria-label="Plus ticket">+</button><br>
-
-            <label>Full Name:</label>
-            <input type="text" aria-label="Full Name">
-            <label>E-mail:</label>
-            <input type="email" aria-label="E-mail">
-            <label>Company:</label>
-            <input type="text" aria-label="Company">
-            <label for="diet-selection">Dietary Needs:</label>
-            <select name="diets">
-                <option value="" aria-label="Diet option dropdown">--Choose Dietary Need--</option>
-                <option value="none" aria-label="No Preference">None</option>
-                <option value="meat-only" aria-label="Meat Only">Meat Only</option>
-                <option value="vegan" aria-label="Vegan">Vegan</option>
-                <option value="none of your business" aria-label="Prefer not to share">None of your business</option>
-            </select>
+            <button class="ticketBTN" aria-label="Minus ticket">-</button>
+            <input class="ticketQuantity" type="number" name="quantity" min="1" max="10" step="1" value="1" inputmode="numeric">
+            <button class="ticketBTN" aria-label="Plus ticket">+</button><br>
+            
+            <span class="inputForm"><br>
+                <label>Full Name:</label><br>
+                <input type="text" aria-label="Full Name"><br>
+                <label>E-mail:</label><br>
+                <input type="email" aria-label="E-mail"><br>
+                <label>Company:</label><br>
+                <input type="text" aria-label="Company"><br>
+                <label for="diet-selection">Dietary Needs:</label><br>
+                <select name="diets">
+                    <option value="" aria-label="Diet option dropdown">--Choose Dietary Need--</option>
+                    <option value="none" aria-label="No Preference">None</option>
+                    <option value="meat-only" aria-label="Meat Only">Meat Only</option>
+                    <option value="vegan" aria-label="Vegan">Vegan</option>
+                    <option value="none of your business" aria-label="Prefer not to share">None of your business</option>
+                </select><br>
+            </span>
 
             <input type="checkbox" value="I accept">
-            <label for="Agree">I Agree To Terms*</label>
-            <input type="submit" value="Submit">
+            <label for="Agree">I Agree To Terms*</label><br>
+            <input class="submitBTN" type="submit" value="Submit">
         </form>
 
     </section>
@@ -85,9 +105,32 @@
 
         <article>
             <h3>Featured speakers</h3>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+            <div class="featuredSpeakers">
+                <div id="speaker1">
+                    <input type="checkbox" id="fav1">
+                    <label for="fav1">
+                        <img src="https://i.pravatar.cc/200?img=2" 
+                        alt="Picture of speaker 1"
+                        aria-label="Picture of speaker 1"/>
+                    </label>
+                </div>
+                <div id="speaker2">
+                    <input type="checkbox" id="fav2">
+                    <label for="fav2">
+                        <img src="https://cdn.discordapp.com/attachments/1461324134704222383/1468178892908134537/Elon-Musk-2010.webp?ex=698313a5&is=6981c225&hm=a541148572f10389c7d66262853ba7914441fde9fff8b0b557051476202c5647&"
+                        alt="Picture of speaker 2"
+                        aria-label="Picture of speaker 2">
+                    </label>
+                </div>
+                <div id="speaker3">
+                    <input type="checkbox" id="fav3">
+                    <label for="fav3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Tom_Cruise-2428.jpg/1280px-Tom_Cruise-2428.jpg"
+                        alt="Picture of speaker 3"
+                        aria-label="Picture of speaker 3">
+                    </label>
+                </div>
+                <div class="heart">❤</div>
         </article>
 
         <article>
