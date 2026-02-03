@@ -150,7 +150,7 @@ img {
 }
 
 
-/* ****mobil*** */
+/******mobil*****/
 @media (max-width: 480px) {
     body {
         grid-template-columns: 1fr;
