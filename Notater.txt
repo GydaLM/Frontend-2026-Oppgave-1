@@ -14,6 +14,7 @@ b) Beskriv minst tre konkrete tiltak du har implementert for visual feedback på
 4. CSS Custom Properties (variables): Hvilke CSS variabler har du definert i løsningen din, og hvilken verdi bidrar de til for prosjektet?
 Forklar fordeler med å bruke variabler fremfor hardkodede verdier, og gi minst ett eksempel på hvordan det har gjort koden
 vedlikeholdsvennlig eller lettere å endre.
+    Det hjelper med å endre på flere elementer på ett sted i stedet for å måtte gå inn i hver enkelt.
 
 Teksten på denne oppgaven skal være på 600 ord (+/- 10%).
 

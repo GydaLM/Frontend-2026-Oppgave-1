@@ -8,17 +8,19 @@
 </head>
 <body>
     <header>
-        <a href="main-content">Jump to Main Content</a>
-        <nav>
-            <div>EVENTO</div>
-            <a href="event">Events</a>
-            <a href="venue">Venue</a>
-            <a href="about">Abouts</a>
-            <a href="contact">Contacts</a>
-            <a href="profile">SVG profile</a>
+        <a href="#main-content" aria-label="Jump to Main Content">Jump to Main Content</a>
+        <nav class="hamburger-nav">
+            <div aria-label="Logo">EVENTO</div>
+            <div class="navlinks">
+                <a href="event" aria-label="Go to Events">Events</a>
+                <a href="venue" aria-label="Go to Venue">Venue</a>
+                <a href="about" aria-label="Go to About">Abouts</a>
+                <a href="contact" aria-label="Go to Contacts">Contacts</a>
+                <a href="profile" aria-label="Go to Profile">🧍‍♀️</a>
+            </div>
         </nav>
         <span>
-            <input type="search" placeholder="Search">
+            <input type="search" placeholder="Search" aria-label="Searchbar">
         </span>
         <h1>Tech Conference 2025</h1>
         <h2>Welcome!</h2>
@@ -130,7 +132,7 @@
                         aria-label="Picture of speaker 3">
                     </label>
                 </div>
-                <div class="heart">❤</div>
+            </div>
         </article>
 
         <article>

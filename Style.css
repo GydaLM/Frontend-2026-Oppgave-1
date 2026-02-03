@@ -1,103 +1,157 @@
+:root {
+    --spacing: 1rem;
+    --bg-colour: #F0F8FF;
+    --border-colour: #cbddf8;
+    --border-width: 0.2rem;
+    --border-style: inset;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     height: 100vh;
-    background-color: lightsalmon;
+    background-color: var(--bg-colour);
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 1fr 3fr;
     grid-template-areas: 'header header' 
                          'section main';
-    
+}
+
+header {
+    padding: var(--spacing);
+    grid-area: header;
+    border: solid;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red) 1;
+    border-width: var(--border-width);
+    --bg-colour: #9fb5db;
+    background-color: var(--bg-colour);
+}
+
+section {
+    padding: var(--spacing);
+    grid-area: section;
+    border: var(--border-width) var(--border-style) var(--border-colour);
+    background-color: var(--bg-colour);
+}
+
+main {
+    padding: var(--spacing);
+    grid-area: main;
+    border: var(--border-width) var(--border-style) var(--border-colour);
+    background-color: var(--bg-colour);
+}
+
+.hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlinks {
+    display: flex;
+    gap: var(--spacing);
 }
 
 a {
-    color: blue;
+    color: #153eb9;
     text-decoration: none;
 }
 
 a:hover {
-    color: red;
+    color: rgb(156, 61, 61);
     text-decoration: underline;
 }
 
-header {
-    padding: 1rem;
-    grid-area: header;
-    background-color: aquamarine;
-}
-
-section {
-    padding: 1rem;
-    grid-area: section;
-    background-color: rgb(49, 180, 115);
-}
 
 .inputForm {
-    margin: 0.5rem;
+    --spacing: 0.5rem;
+    margin: var(--spacing);
+}
+
+input {
+    transition: transform 0.4s ease-in;
 }
 
 input:hover {
     transform: scale(1.2);
-    transition: transform 0.4s ease-in-out;
 }
 
+select {
+    transition: transform 0.4s ease-in-out;
+}
 select:hover {
     transform: scale(1.2);
-    transition: transform 0.4s ease-in-out;
 }
 
 .ticketQuantity {
-    width: 1.5rem;
+    --spacing: 1.5rem;
+    width: var(--spacing);
 }
 
 .ticketBTN {
-    width: 1.5rem;
+    --spacing: 1.5rem;
+    width: var(--spacing);
 }
 
 .ticketBTN, .submitBTN {
     cursor: pointer;
+    transition: transform 0.4s ease-in-out;
 }
 .ticketBTN:hover, .submitBTN:hover {
     transform: scale(1.2);
-    transition: transform 0.4s ease-in-out;
 }
 
 .SVG {
     display: flex;
-    gap: 2rem;
-}
-
-main {
-    padding: 1rem;
-    grid-area: main;
-    background-color: brown;
+    --spacing: 2rem;
+    gap: var(--spacing);
 }
 
 .featuredSpeakers {
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing);
 }
 
 img {
-    height: 5rem;
-    width: 5rem;
-}
-
-#fav1:checked + label img {
-    transform: scale(1.2);
-}
-#fav2:checked + label img {
-    transform: scale(1.2);
-}
-#fav3:checked + label img {
-    transform: scale(1.2);
+    --spacing: 5rem;
+    height: var(--spacing);
+    width: var(--spacing);
+    border-radius: 50%;
 }
 
 
+.featuredSpeakers input[type="checkbox"] {
+    display: none;
+}
+
+.featuredSpeakers label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.featuredSpeakers label::after {
+    content: "♡";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 26px;
+    color: white;
+    text-shadow: 0 0 4px black;
+
+}
+
+.featuredSpeakers input:checked + label::after {
+    content: "♥";
+    color: crimson;
+}
 
 
-/*****mobil****/
-/* @media (max-width: 480px) {
+/* ****mobil*** */
+@media (max-width: 480px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
@@ -108,7 +162,7 @@ img {
 }
 
 /*****tablet****/
-/* @media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1024px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
@@ -116,4 +170,4 @@ img {
                              'section' 
                              'main';
     }
-} */ 
+}
