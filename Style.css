@@ -45,6 +45,14 @@ main {
     background-color: var(--bg-colour);
 }
 
+.linkToMC {
+    display: none;          
+}
+
+.linkToMC:focus-visible {
+    display: inline-block;
+}
+
 .hamburger-nav {
     display: flex;
     justify-content: space-between;
