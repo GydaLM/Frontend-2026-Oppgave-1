@@ -178,6 +178,7 @@ main {
     grid-area: main;
     border: var(--border-width) var(--border-style) var(--border-colour);
     background-color: var(--bg-colour);
+    container-type: inline-size;
 }
 
 .featuredSpeakers {
@@ -229,12 +230,6 @@ main {
                              'main';
     }
 
-    .featuredSpeakers > div {
-        flex: 0 0 calc(100% - var(--spacing));
-        display: flex;
-        justify-content: center;
-    }
-
     .hamburger {
         display: flex;
     }
@@ -268,10 +263,23 @@ main {
                              'main';
          
         }
+}
 
-    .featuredSpeakers > div {
-        flex: 0 0 calc(50% - var(--spacing));
-        display: flex;
-        justify-content: center;
+@container (max-width: 480px) {
+    
+        .featuredSpeakers > div {
+            flex: 0 0 calc(100% - var(--spacing));
+            display: flex;
+            justify-content: center;
     }
 }
+
+@container (min-width: 481px) and (max-width: 1024px) {
+    
+        .featuredSpeakers > div {
+            flex: 0 0 calc(50% - var(--spacing));
+            display: flex;
+            justify-content: center;
+    }
+}
+
