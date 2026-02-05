@@ -9,14 +9,20 @@
 <body>
     <header>
         <a class="linkToMC" href="#main-content" aria-label="Jump to Main Content">Jump to Main Content</a>
-        <nav class="hamburger-nav">
+        <nav class="nav-menu">
             <div aria-label="Logo">EVENTO</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger" aria-label="Open Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
             <div class="navlinks">
-                <a href="event" aria-label="Go to Events">Events</a>
-                <a href="venue" aria-label="Go to Venue">Venue</a>
-                <a href="about" aria-label="Go to About">Abouts</a>
-                <a href="contact" aria-label="Go to Contacts">Contacts</a>
-                <a href="profile" aria-label="Go to Profile">🧍‍♀️</a>
+                <a href="#event" aria-label="Go to Events">Events</a>
+                <a href="#venue" aria-label="Go to Venue">Venue</a>
+                <a href="#about" aria-label="Go to About">Abouts</a>
+                <a href="#contact" aria-label="Go to Contacts">Contacts</a>
+                <a href="#profile" aria-label="Go to Profile">🧍‍♀️</a>
                 <input type="search" placeholder="Search" aria-label="Searchbar">
             </div>
         </nav>
@@ -62,11 +68,11 @@
         <form>
             <h3>Register</h3>
             <p>Ticket type:</p>
-            <input type="radio" value="Early Bird" aria-label="Early Bird">
+            <input type="radio" name="ticket" value="Early Bird" aria-label="Early Bird">
             <label for="Early Bird">Early Bird</label><br>
-            <input type="radio" value="Regular" aria-label="Regular">
+            <input type="radio" name="ticket" value="Regular" aria-label="Regular" checked>
             <label for="Regular">Regular</label><br>
-            <input type="radio" value="VIP" aria-label="VIP">
+            <input type="radio" name="ticket" value="VIP" aria-label="VIP">
             <label for="VIP">VIP</label><br>
             <label for="quantity">Quantity:</label>
             <button class="ticketBTN" aria-label="Minus ticket">-</button>
@@ -118,7 +124,7 @@
                 <div id="speaker2">
                     <input type="checkbox" id="fav2">
                     <label for="fav2">
-                        <img src="https://cdn.discordapp.com/attachments/1461324134704222383/1468178892908134537/Elon-Musk-2010.webp?ex=698313a5&is=6981c225&hm=a541148572f10389c7d66262853ba7914441fde9fff8b0b557051476202c5647&"
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.meme-arsenal.com%2Fmemes%2Fca4f614c6e84d0f5c674b79f66048bdc.jpg&f=1&nofb=1&ipt=e5106190e5641cec1aea059ec4e885020994bc3e22e5e0662068cb92ccc1433e"
                         alt="Picture of speaker 2"
                         aria-label="Picture of speaker 2">
                     </label>

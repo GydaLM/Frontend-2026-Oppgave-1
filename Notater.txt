@@ -3,7 +3,6 @@ Løses individuelt etter at teamarbeidet er fullført.
 I tillegg til koden skal du svare skriftlig på spørsmålene under. Husk at denne delen skal løses individuelt.
 
 1. Hvordan har du løst CSS Grid-strategien i denne oppgaven? Sammenlign med Flexbox og forklar hvorfor du valgte Grid for hovedlayouten.
-    Med grid kan man plassere ting på et sted i siden, med flexbox flytter ting seg mer etter innholdet og skjerm.
     
 2. Forklar hvordan du har brukt media queries for å gjøre siden responsiv. Hvilke breakpoints valgte du, og hvorfor? Beskriv konkrete
  endringer i layout ved hvert breakpoint.
@@ -14,7 +13,6 @@ b) Beskriv minst tre konkrete tiltak du har implementert for visual feedback på
 4. CSS Custom Properties (variables): Hvilke CSS variabler har du definert i løsningen din, og hvilken verdi bidrar de til for prosjektet?
 Forklar fordeler med å bruke variabler fremfor hardkodede verdier, og gi minst ett eksempel på hvordan det har gjort koden
 vedlikeholdsvennlig eller lettere å endre.
-    Det hjelper med å endre på flere elementer på ett sted i stedet for å måtte gå inn i hver enkelt.
 
 Teksten på denne oppgaven skal være på 600 ord (+/- 10%).
 

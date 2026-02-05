@@ -4,6 +4,7 @@
     --border-colour: #cbddf8;
     --border-width: 0.2rem;
     --border-style: inset;
+    --transition: transform 0.4s ease-in-out;
 }
 
 html {
@@ -21,6 +22,7 @@ body {
                          'section main';
 }
 
+/***Header***/
 header {
     padding: var(--spacing);
     grid-area: header;
@@ -31,31 +33,63 @@ header {
     background-color: var(--bg-colour);
 }
 
-section {
-    padding: var(--spacing);
-    grid-area: section;
-    border: var(--border-width) var(--border-style) var(--border-colour);
-    background-color: var(--bg-colour);
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
 }
 
-main {
-    padding: var(--spacing);
-    grid-area: main;
-    border: var(--border-width) var(--border-style) var(--border-colour);
-    background-color: var(--bg-colour);
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 7px);
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7.5px, -7px);
+}
+
+.SVG {
+    display: flex;
+    --spacing: 2rem;
+    gap: var(--spacing);
 }
 
 .linkToMC {
-    display: none;          
+    position: absolute;
+    left: -9999px;
+    top: 0;
 }
 
 .linkToMC:focus-visible {
+    left: 10rem;
+    top: 1rem;
+    color: black;
+    background-color: yellow;
     display: inline-block;
 }
 
-.hamburger-nav {
+.nav-menu {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .navlinks {
@@ -72,7 +106,15 @@ a:hover {
     color: rgb(156, 61, 61);
     text-decoration: underline;
 }
+        
+/***Section***/
 
+section {
+    padding: var(--spacing);
+    grid-area: section;
+    border: var(--border-width) var(--border-style) var(--border-colour);
+    background-color: var(--bg-colour);
+}
 
 .inputForm {
     --spacing: 0.5rem;
@@ -80,7 +122,7 @@ a:hover {
 }
 
 input {
-    transition: transform 0.4s ease-in;
+    transition: var(--transition);
 }
 
 input:hover {
@@ -88,7 +130,7 @@ input:hover {
 }
 
 select {
-    transition: transform 0.4s ease-in-out;
+    transition: var(--transition);
 }
 select:hover {
     transform: scale(1.2);
@@ -106,30 +148,34 @@ select:hover {
 
 .ticketBTN, .submitBTN {
     cursor: pointer;
-    transition: transform 0.4s ease-in-out;
+    transition: var(--transition);
 }
 .ticketBTN:hover, .submitBTN:hover {
     transform: scale(1.2);
 }
 
-.SVG {
-    display: flex;
-    --spacing: 2rem;
-    gap: var(--spacing);
+
+/***Main***/
+
+main {
+    padding: var(--spacing);
+    grid-area: main;
+    border: var(--border-width) var(--border-style) var(--border-colour);
+    background-color: var(--bg-colour);
 }
 
 .featuredSpeakers {
+    --spacing: 5rem;
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing);
 }
 
-img {
-    --spacing: 5rem;
+.featuredSpeakers img {
     height: var(--spacing);
     width: var(--spacing);
     border-radius: 50%;
 }
-
 
 .featuredSpeakers input[type="checkbox"] {
     display: none;
@@ -149,7 +195,6 @@ img {
     font-size: 26px;
     color: white;
     text-shadow: 0 0 4px black;
-
 }
 
 .featuredSpeakers input:checked + label::after {
@@ -167,6 +212,34 @@ img {
                              'section' 
                              'main';
     }
+
+    .featuredSpeakers > div {
+        flex: 0 0 calc(100% - var(--spacing));
+        display: flex;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navlinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-colour);
+        flex-direction: column;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle:checked ~ .navlinks {
+        max-height: 400px;
+    }
 }
 
 /*****tablet****/
@@ -177,5 +250,12 @@ img {
         grid-template-areas: 'header' 
                              'section' 
                              'main';
+         
+        }
+
+    .featuredSpeakers > div {
+        flex: 0 0 calc(50% - var(--spacing));
+        display: flex;
+        justify-content: center;
     }
 }
