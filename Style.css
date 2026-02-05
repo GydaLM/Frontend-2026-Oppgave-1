@@ -5,6 +5,9 @@
     --border-width: 0.2rem;
     --border-style: inset;
     --transition: transform 0.4s ease-in-out;
+    --min-font: 16px;
+    --max-font: 20px;
+    --preferred-font: 2vw;
 }
 
 html {
@@ -22,8 +25,16 @@ body {
                          'section main';
 }
 
-h1 {
-    font-size: clamp(24px, 4vw, 48px);
+p {
+    font-size: clamp(var(--min-font), var(--preferred-font), var(--max-font));
+}
+
+label {
+    font-size: clamp(var(--min-font), var(--preferred-font), var(--max-font));
+}
+
+span {
+    font-size: clamp(var(--min-font), var(--preferred-font), var(--max-font));
 }
 
 /***Header***/
@@ -104,6 +115,7 @@ header {
 a {
     color: #153eb9;
     text-decoration: none;
+    font-size: clamp(var(--min-font), var(--preferred-font), var(--max-font));
 }
 
 a:hover {
