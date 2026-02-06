@@ -165,6 +165,7 @@ select:hover {
 .ticketBTN, .submitBTN {
     cursor: pointer;
     transition: var(--transition);
+    background-color: #9fb5db;
 }
 .ticketBTN:hover, .submitBTN:hover {
     transform: scale(1.2);
